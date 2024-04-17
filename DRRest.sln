@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DRRest", "DRRest\DRRest.csproj", "{95384660-3109-443C-8A97-A1AA90259846}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DRRestTests", "DRRestTests\DRRestTests.csproj", "{B5D969A9-A9A0-498E-B804-63AA5375EB3A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95384660-3109-443C-8A97-A1AA90259846}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95384660-3109-443C-8A97-A1AA90259846}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95384660-3109-443C-8A97-A1AA90259846}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95384660-3109-443C-8A97-A1AA90259846}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5D969A9-A9A0-498E-B804-63AA5375EB3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5D969A9-A9A0-498E-B804-63AA5375EB3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5D969A9-A9A0-498E-B804-63AA5375EB3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5D969A9-A9A0-498E-B804-63AA5375EB3A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CB9F5DAF-645D-4943-9DA1-740719E41F3F}
+	EndGlobalSection
+EndGlobal
