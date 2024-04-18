@@ -1,0 +1,23 @@
+name: Publish
+on:
+   workflow_dispatch:
+   push:
+        branches:
+          -main
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+       - users: actions/checkout@v3
+        -name: Setup .NET
+        users: actions/checkout@v3
+        with:
+           dotnet-version: '6.0.x'
+        -name:Restore
+         run: donet restore ./currentTimeService.sln
+        -name: Build
+        -run:donet restore ./currentTimeService.sln --configuration --no-restore
+        -name: Publish
+         -run:donet restore ./currentTimeService.sln --configuration --no-Build
+        
+        
