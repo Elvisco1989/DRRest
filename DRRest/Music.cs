@@ -2,6 +2,7 @@
 {
     public class Music
     {
+        public int Id;
         public  string? Title  { get; set; }
 
         public string? Artist { get; set; }
@@ -13,7 +14,7 @@
 
         public override string ToString()
         {
-            return $"{Title},{Artist},{PublicationYear}, {Duration}";
+            return $" Id : {Id} , Title: {Title} , Artist : {Artist} , Publication Year : ,{PublicationYear} , Duration:  {Duration}";
         }
 
         public void ValidateTitlle()
@@ -37,6 +38,13 @@
             {
                 throw new ArgumentException("Duration must be greater than 2 ");
             }
+        }
+
+        public void Validate()
+        {
+            ValidateTitlle();
+            ValidateArtist();
+            ValidateDuration();
         }
 
     }

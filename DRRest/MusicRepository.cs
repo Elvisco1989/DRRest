@@ -34,5 +34,16 @@ namespace DRRest
             }
             return music;
         }
+
+        public Music? Delete(int id)
+        {
+            Music? music = musicList.Find(m=>m.Id==id);
+            if (music != null)
+            {
+                musicList.Remove(music);
+            }
+            return music;
+
+        }
     }
 }
