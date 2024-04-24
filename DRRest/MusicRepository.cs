@@ -18,9 +18,21 @@ namespace DRRest
 
            
         }
-        public List<Music> GetMusicList()
+       
+        public List<Music> GetMusicList(string? title=null, string? artist=null)
         {
-            return musicList;
+            List<Music> list = new List<Music>();
+            list = musicList.FindAll(m => (title==null || m.Title==title) && (artist==null || m.Artist == artist));
+             return list;
+        }
+
+        public Music? AddMusic(Music? music)
+        {
+            if (music != null)
+            {
+                musicList.Add(music);
+            }
+            return music;
         }
     }
 }
