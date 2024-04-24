@@ -1,7 +1,8 @@
 ﻿namespace DRRest
 {
     public class Music
-    {
+    {    
+        public int Id;
         public  string? Title  { get; set; }
 
         public string? Artist { get; set; }
