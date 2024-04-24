@@ -23,9 +23,9 @@ namespace DRRest.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [HttpGet]
-        public ActionResult<IEnumerable<Music>> Get()
+        public ActionResult<IEnumerable<Music>> Get(string? title=null, string? artist=null)
         {
-            var musicList = repo.GetMusicList();
+            var musicList = repo.GetMusicList(title,artist);
             if (musicList != null && musicList.Any()) 
             { 
                 return Ok(musicList);
@@ -35,7 +35,7 @@ namespace DRRest.Controllers
                 return NoContent();
             }
             
-            return repo.GetMusicList();
+            
         }
 
         //// GET api/<MusicsController>/5
@@ -45,11 +45,11 @@ namespace DRRest.Controllers
         //    return "value";
         //}
 
-        //// POST api/<MusicsController>
-        //[HttpPost]
-        //public void Post([FromBody] string value)
-        //{
-        //}
+        // POST api/<MusicsController>
+        [HttpPost]
+        public void Post([FromBody] string value)
+        {
+        }
 
         //// PUT api/<MusicsController>/5
         //[HttpPut("{id}")]
