@@ -22,5 +22,21 @@ namespace DRRest
         {
             return musicList;
         }
+
+        public Music? Update(int id, Music data)
+        {
+            Music? music = musicList.Find(m=>m.Id==id);
+
+            if (music != null)
+            { 
+                music.Title = data.Title;
+                music.Artist = data.Artist;
+                music.Duration = data.Duration;
+                music.PublicationYear = data.PublicationYear;
+            }
+
+            return music;
+
+        }
     }
 }
