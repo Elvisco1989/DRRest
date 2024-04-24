@@ -61,5 +61,17 @@ namespace DRRest
             return music;
 
         }
+
+        public Music? GetBy(int id)
+        {
+            Music? foundMusic = musicList.Find(m=> m.Id==id);
+            if(foundMusic == null)
+            {
+                return null;
+            }
+            return foundMusic;
+
+
+        }
     }
 }
