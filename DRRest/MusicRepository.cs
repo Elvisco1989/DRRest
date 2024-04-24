@@ -18,9 +18,12 @@ namespace DRRest
 
            
         }
-        public List<Music> GetMusicList()
+        // This is my DR branch BRANCH
+        public List<Music> GetMusicList(string? title=null, string? artist=null)
         {
-            return musicList;
+            List<Music> list = new List<Music>();
+            list = musicList.FindAll(m => (title==null || m.Title==title) && (artist==null || m.Artist == artist));
+             return list;
         }
     }
 }
