@@ -14,7 +14,7 @@ namespace DRRest.Tests
         [TestMethod()]
         public void MusicRepositoryTest()
         {
-            // Arrange
+            // Arrange IT 
             MusicRepository repository = new MusicRepository();
             // Act
             var Expected = repository.GetMusicList().Count;
