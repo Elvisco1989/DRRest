@@ -52,5 +52,23 @@ namespace DRRest.Tests
             Assert.AreEqual(11, Expected);
 
         }
+        [TestMethod()]
+        public void UpdateMusic()
+        {
+            MusicRepository musicRepository = new MusicRepository();
+            Music mo = new Music() { Artist="Ndum", Title="Football", PublicationYear=2024, Duration=4};
+            int id = 1;
+
+            //Act
+            musicRepository.Update(1, mo);
+            var Expected = musicRepository.GetMusicList();
+            var data = Expected[0];
+
+
+            //Assert
+           
+            Assert.AreEqual(data.Artist, mo.Artist);
+
+        }
     }
 }
