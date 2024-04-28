@@ -19,7 +19,7 @@ namespace DRRest.Tests
             // Act
             var Expected = repository.GetMusicList().Count;
            // Assert
-            Assert.AreEqual(4, Expected);
+            Assert.AreEqual(12, Expected);
         }
         [TestMethod()]
         public void AddmusicTest()
