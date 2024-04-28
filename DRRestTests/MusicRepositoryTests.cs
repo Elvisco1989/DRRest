@@ -35,5 +35,22 @@ namespace DRRest.Tests
             var Expected = musicRepository.GetMusicList().Count;
             Assert.AreEqual(13, Expected);
         }
+        [TestMethod()]
+        public void DeleteMusic()
+        {
+            //Arrange
+            MusicRepository musicRepository = new MusicRepository();
+            Music mo = new Music();
+            mo.Id = 1;
+
+            //Act
+            musicRepository.Delete(1);
+
+
+            //Assert
+            var Expected = musicRepository.GetMusicList().Count;
+            Assert.AreEqual(11, Expected);
+
+        }
     }
 }
