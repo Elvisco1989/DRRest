@@ -45,11 +45,11 @@ namespace DRRest.Controllers
         //    return "value";
         //}
 
-        //// POST api/<MusicsController>
-        //[HttpPost]
-        //public void Post([FromBody] string value)
-        //{
-        //}
+        // POST api/<MusicsController>
+        [HttpPost]
+        public void Post([FromBody] string value)
+        {
+        }
 
         //// PUT api/<MusicsController>/5
         //[HttpPut("{id}")]
