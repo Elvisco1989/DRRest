@@ -1,4 +1,6 @@
-﻿namespace DRRest
+﻿using System.Collections.Immutable;
+
+namespace DRRest
 {
     public class Music
     {    
@@ -15,19 +17,19 @@
 
         public override string ToString()
         {
-            return $" Id : {Id} , Title: {Title} , Artist : {Artist} , Publication Year : ,{PublicationYear} , Duration:  {Duration}";
+            return $"Id:{Id},Title:{Title},Artist:{Artist},Publication Year:{PublicationYear},Duration:{Duration}";
         }
 
         public void ValidateTitlle()
         {
-            if (Title != null)
+            if (string.IsNullOrEmpty(Title))
             {
                 throw new ArgumentNullException("title should not be empty");
             }
         }
         public void ValidateArtist()
         {
-            if (Artist != null)
+            if (string.IsNullOrEmpty(Artist))
             {
                 throw new ArgumentNullException("Artist should not be empty");
             }
