@@ -8,13 +8,15 @@ namespace DRRest
 
         public MusicRepository()
         {
-            musicList = new List<Music>()
-            {
+            musicList = new List<Music>() { 
+          
                 new Music() { Id=1,Title="Rock", Artist="Klaus", PublicationYear=1990, Duration=4},
                 new Music() { Id=2,Title="Pop", Artist="Frederick", PublicationYear=2000, Duration=3},
                 new Music() {Id=3,Title="Makossa", Artist="Elvis", PublicationYear=2015, Duration=4},
                 new Music() {Id= 4,Title="SlowJam", Artist="John", PublicationYear=2024, Duration=4},
-                new Music(){Id=5, Title="BottleDance", Artist="Johnminang",PublicationYear=2024, Duration=4}
+                new Music(){Id=5, Title="BottleDance", Artist="Johnminang",PublicationYear=2024, Duration=4},
+                 new Music(){Id=5, Title="Bone", Artist="Johnminang",PublicationYear=2024, Duration=4}
+
             };
 
            
