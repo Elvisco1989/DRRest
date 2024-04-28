@@ -21,5 +21,19 @@ namespace DRRest.Tests
            // Assert
             Assert.AreEqual(4, Expected);
         }
+        [TestMethod()]
+        public void AddmusicTest()
+        {
+            //Arrange
+            MusicRepository musicRepository = new MusicRepository();
+            Music mo = new Music();
+
+            //Act
+            musicRepository.AddMusic(mo);
+
+            //Assert
+            var Expected = musicRepository.GetMusicList().Count;
+            Assert.AreEqual(13, Expected);
+        }
     }
 }
