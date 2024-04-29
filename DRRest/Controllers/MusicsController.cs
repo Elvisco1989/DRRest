@@ -39,28 +39,32 @@ namespace DRRest.Controllers
         }
 
         //// GET api/<MusicsController>/5
-        //[HttpGet("{id}")]
-        //public string Get(int id)
-        //{
-        //    return "value";
-        //}
+        [HttpGet("{id}")]
+        public Music? Get(int id)
+        {
+           Music? music= repo.GetBy(id);
+            return music;
+        }
 
         // POST api/<MusicsController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Music music)
         {
+            repo.AddMusic(music);
         }
 
         //// PUT api/<MusicsController>/5
-        //[HttpPut("{id}")]
-        //public void Put(int id, [FromBody] string value)
-        //{
-        //}
+        [HttpPut("{id}")]
+        public void Put(int id, [FromBody] Music music)
+        {
+            repo.Update(id, music);
+        }
 
-        //// DELETE api/<MusicsController>/5
-        //[HttpDelete("{id}")]
-        //public void Delete(int id)
-        //{
-        //}
+        // DELETE api/<MusicsController>/5
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
+            repo.Delete(id);
+        }
     }
 }
