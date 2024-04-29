@@ -25,6 +25,7 @@ namespace DRRest
                 new Music() {Id=11,Title="Nike", Artist="Johnminang",PublicationYear=2024, Duration=4},
                 new Music() {Id=12,Title="Pe", Artist="Johnminang",PublicationYear=2024, Duration=4},
                 new Music() {Id=12,Title="Klaus", Artist="Woman",PublicationYear=2024, Duration=4}
+                 new Music() {Id=12,Title="Klaus2", Artist="Woman",PublicationYear=2024, Duration=4}
 
 
 
