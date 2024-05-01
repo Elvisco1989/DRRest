@@ -1,4 +1,6 @@
 using DRRest;
+using Microsoft.EntityFrameworkCore;
+using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,9 +9,12 @@ builder.Services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
 {
     builder.AllowAnyOrigin()
             .AllowAnyMethod()
-            .AllowAnyHeader();
+    .AllowAnyHeader();
 
 }));
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+           options.UseSqlServer(builder.Configuration.GetConnectionString("DREST")));
+
 
 builder.Services.AddControllers();
 builder.Services.AddSingleton<MusicRepository>();
