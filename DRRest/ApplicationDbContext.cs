@@ -7,6 +7,6 @@ namespace DRRest
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
         }
-        DbSet<Music> music { get; set; } 
+       public DbSet<Music> music { get; set; } 
     }
 }
